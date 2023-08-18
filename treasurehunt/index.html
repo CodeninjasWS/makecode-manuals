@@ -1,0 +1,175 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Treasure Hunt</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="treasurehunt"
+                  title="Treasure Hunt"
+                  environment="web"
+                  feedback-link="mailto:griffinthesensei@gmail.com">
+    
+      <google-codelab-step label="| Introduction" duration="0">
+        <p><strong>Last Updated:</strong> 2023-08-17</p>
+<p>In this game you will make a treasure hunt style game, where you explore the tilemap and collect chests. A link to the completed game is here:</p>
+<p><a href="https://arcade.makecode.com/S36053-64720-95109-55444" target="_blank">https://arcade.makecode.com/S36053-64720-95109-55444</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Creating the project" duration="0">
+        <p>2.1,  Navigate to <a href="https://arcade.makecode.com" target="_blank">https://arcade.makecode.com</a></p>
+<p>2.2,  Click &#34;New Project&#34;</p>
+<p class="image-container"><img style="width: 185.76px" src="img\\587c8a1c9514a59d.png"></p>
+<p>2.3, Then name your project, and press create.</p>
+<p class="image-container"><img style="width: 348.50px" src="img\\fbc95802da74d6d0.png"></p>
+<p>2.4, Once your screen looks like this, you can continue on to the next step.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\cc42f76a9fe1c6da.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Sprites" duration="0">
+        <p>In this step you will add a sprite to the scene.</p>
+<p>3.1,  For this project you will need a sprite, a sprite is a character that you control, however it can also be items or projectiles.</p>
+<p>3.2, Open up the sprites menu, then select the &#34;Set Mysprite to sprite of kind player&#34; block.</p>
+<p class="image-container"><img style="width: 513.50px" src="img\\9c40a2677470197b.png"></p>
+<p>3.3, Then drag that block to underneath the green On Start block. The on start block runs as soon as the play button is pressed.</p>
+<p class="image-container"><img style="width: 453.50px" src="img\\1c3fc10e4859404b.png"></p>
+<p>3.4, You see that grey box? If you click it, you will see the options of sprites you can pick from.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\93510a7c42ba7bfc.png"></p>
+<p>3.5, Click on the button that says Gallery.</p>
+<p class="image-container"><img style="width: 420.00px" src="img\\2f013976ac08a825.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\\68e9c92a8bac7a24.png"></p>
+<p>3.6, Scroll through and pick a sprite that you like, this will be the explorer in our treasure hunt.</p>
+<p>3.7, Click on the sprite that you want, then click Done (in the bottom right corner).</p>
+<p>Your final code after this step should look something like this: </p>
+<p class="image-container"><img style="width: 640.50px" src="img\\35f108d16f5cf971.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Motion" duration="0">
+        <p>In this step you will add motion to the sprite that you just created.</p>
+<p>4.1, Open the Controller menu.</p>
+<p class="image-container"><img style="width: 376.50px" src="img\\228fbde347153c63.png"></p>
+<p>4.2, Drag and drop the &#34;Move mySprite with buttons&#34; block underneath the block which added the sprite.</p>
+<p class="image-container"><img style="width: 456.50px" src="img\\db676eab0678aee9.png"></p>
+<p>4.3, Press play on the little gamepad to see your game in action.</p>
+<p class="image-container"><img style="width: 301.74px" src="img\\d5d4c61d06c45f10.png"></p>
+<p>4.4, Use the D-pad to control the sprite, but try leaving the screen. It works, and the camera doesn&#39;t follow you. This is a problem because the sprite can get lost.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Camera" duration="0">
+        <p>In this step you will make the camera follow the sprite.</p>
+<p><br>5.1, Making the camera follow the sprite is super easy, just a single block will make the camera follow the sprite. You can find the block in Scene -&gt; Camera follow Mysprite. It looks like this:</p>
+<p class="image-container"><img style="width: 393.50px" src="img\\e35b2956523e27e1.png"></p>
+<p>5.2, Your code thus far should look like so:</p>
+<p class="image-container"><img style="width: 547.50px" src="img\\971f5da4f6fb7e4b.png"></p>
+<p>5.3, Playtest your game and see if the camera follows the sprite. You shouldn&#39;t be able to tell very much. Let&#39;s add a map to the game to change that.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Tilemap" duration="0">
+        <p>In this step you will add a tile map, this step will take a bit longer because you have to design a module.</p>
+<p>6.1, Add the tilemap block.</p>
+<p class="image-container"><img style="width: 369.50px" src="img\\29aac7aa23a98384.png"></p>
+<p>6.2, Then drag it under where the rest of your code is.</p>
+<p>6.2b, Click on the grey box and make your tilemap, ask a sensei if you need help.</p>
+<p>Make sure your tile map has the following.</p>
+<ul>
+<li>Border around the edge.</li>
+<li>Walls inside to make a maze.</li>
+</ul>
+<p>If you need inspiration here is a basic tilemap,</p>
+<p class="image-container"><img style="width: 582.77px" src="img\\1a7c5be980511c63.png"></p>
+<p>6.3, Press &#34;Done&#34; and playtest your game.</p>
+<p>You were probably able to walk on your walls, lets fix that right now. If you open up the tilemap editor again you can see one that looks like a wall icon. </p>
+<p class="image-container"><img style="width: 256.50px" src="img\\5707be34cec73c1f.png"></p>
+<p>6.4, Click this, it will light up. </p>
+<p class="image-container"><img style="width: 405.00px" src="img\\7dcb66dc85d61c4.png"></p>
+<p>6.5, Now you have opened the wall painter. Click ontop of the walls which you have previously placed to turn them into a wall. </p>
+<p>6.6, Playtest your game again.</p>
+<p>The walls should work now.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Chests" duration="0">
+        <p>Now that you have made a tilemap, you should attempt to place chests around your tilemap. Please place at least one open chest somewhere on your tilemap.</p>
+<p>If you need help, ask a sensei!</p>
+<p>Your tilemap should look something like this: when you finish. </p>
+<p class="image-container"><img style="width: 624.00px" src="img\\8e5629c5ff214f34.png"></p>
+<p>Then press done.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Chests Logic" duration="0">
+        <p>In these steps you will create the logic for the chests.</p>
+<p>8.1 Locate the block in Scene that looks like this:</p>
+<p class="image-container"><img style="width: 515.50px" src="img\\1cf869a4cc505f62.png"></p>
+<p>8.2 Drag it beside the On Start to look like this:</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\da0d7a3483b1e00a.png"></p>
+<p>8.3 Click on the checkered pattern and select the closed chest.</p>
+<p>8.4 Then open the Info menu, then drag the &#34;Change score by __&#34; block to inside your overlap block.</p>
+<p>It should look like this,</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\e6b3b6e64c63cfea.png"></p>
+<p>8.5 Playtest your game. The score goes up continuously right? So we need to fix that. Luckily this can be fixed with just one more block. Try to find  this block on your own.</p>
+<p>8.6 Couldn&#39;t find it. It looks like this, and is in the scene menu.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\6e19d60ed3d5b86a.png"></p>
+<p>8.7 Drag down the Location chip from the overlap block to the tilemap col, it should look like this.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\41643fc8bffed4fe.png"></p>
+<p>8.8, Click the checkerd pattern and have it changed to the open chest. Playtest your game again and see how high of a score you can get. The current code should look like this.</p>
+<p class="image-container"><img style="width: 504.50px" src="img\\1ec6fcdef29fe4af.png"></p>
+<p>Make note of the final score.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Winning" duration="0">
+        <p>The final code is very simple, so I will just show you the blocks and you will figure it out yourself. Like a prove yourself test at codeninjas.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\74f479f79abd75ab.png"></p>
+<p>The full code is on the last step.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="| Final code" duration="0">
+        <p class="image-container"><img style="width: 624.00px" src="img\\bb5a7a47fd893b4.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

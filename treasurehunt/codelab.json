@@ -1,0 +1,23 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2023-08-18T17:05:06Z",
+  "id": "treasurehunt",
+  "duration": 0,
+  "title": "Treasure Hunt",
+  "authors": "G",
+  "summary": "In this game you will make a treasure hunt style game, where you explore the tilemap and collect chests.",
+  "source": "1ZPyqmIQ-VcDinTPyFrlJr9gsovhULUR-X-CyUzzcKKo",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "web"
+  ],
+  "tags": [],
+  "feedback": "mailto:griffinthesensei@gmail.com",
+  "url": "treasurehunt"
+}
